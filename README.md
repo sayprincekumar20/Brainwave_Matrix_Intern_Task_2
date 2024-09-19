@@ -62,7 +62,8 @@ After comparing the models, Logistic Regression was found to be the best fit for
 * Logistic Regression F1 Score(1): 0.78
 * Logistic Regression Accuracy: 0.78
 * ROC Curve (area= 0.78)
- * Logistic Regression Confusion Matrix:
+  
+ Logistic Regression Confusion Matrix:
 
 
    *       [[40.21%, 9.66%],
@@ -85,7 +86,9 @@ SVM Confusion Matrix:
 * Bernoulli Naive Bayes F1 Score: 80.0
 * Bernoulli Naive Bayes Accuracy: 80.0
 * ROC Curve (area= 0.80)
-* Bernoulli Naive Bayes Confusion Matrix:
+
+  
+ Bernoulli Naive Bayes Confusion Matrix:
 
 
 *      [[39.62%, 10.25%],
