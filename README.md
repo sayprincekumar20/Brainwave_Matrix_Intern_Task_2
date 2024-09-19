@@ -23,3 +23,69 @@ The various steps involved in the `Machine Learning Pipeline` are:
 * Function for Model Evaluation
 * Model Building
 * Model Evaluation
+
+#### Installation
+To run this project, you need to have the following libraries installed:
+
+bash
+Copy code
+*     pip install pandas numpy matplotlib seaborn scikit-learn
+#### Data Exploration
+We began the analysis with Exploratory Data Analysis (EDA) to understand the dataset. Key steps included:
+
+* Data Cleaning: Removing duplicates, null values, and irrelevant information.
+* Text Preprocessing: Tokenization, stemming, and lemmatization of tweets.
+* Visualization: Word frequency graphs to identify the most common terms in positive and negative tweets.
+
+### Model Comparison
+Three different models were compared for their performance on the sentiment analysis task:
+
+1. Logistic Regression
+2. Support Vector Machine (SVM)
+3. Bernoulli Naive Bayes
+
+Each model was evaluated using:
+
+* F1 Score: To measure the model's accuracy in classifying tweets.
+* Accuracy: The proportion of true results (both true positives and true negatives) among the total number of cases examined.
+* Confusion Matrix: To visualize the performance of the model.
+* ROC-AUC Curve: To assess the models' ability to distinguish between classes.
+
+###  ROC-AUC Curve
+The ROC-AUC curves for all three models were plotted to visualize their performance.
+
+Results
+After comparing the models, Logistic Regression was found to be the best fit for the dataset, achieving the highest F1 score, accuracy, and AUC.
+
+* Logistic Regression F1 Score: X.XX
+* Logistic Regression Accuracy: X.XX
+* Logistic Regression Confusion Matrix:
+
+lua
+Copy code
+   *       [[True Negatives, False Positives],
+           [False Negatives, True Positives]]
+
+       
+SVM F1 Score: X.XX
+
+SVM Accuracy: X.XX
+
+SVM Confusion Matrix:
+
+lua
+Copy code
+*      [[True Negatives, False Positives],
+       [False Negatives, True Positives]]
+
+   
+* Bernoulli Naive Bayes F1 Score: X.XX
+* Bernoulli Naive Bayes Accuracy: X.XX
+* Bernoulli Naive Bayes Confusion Matrix:
+
+    lua
+Copy code
+*      [[True Negatives, False Positives],
+      [False Negatives, True Positives]]
+
+
