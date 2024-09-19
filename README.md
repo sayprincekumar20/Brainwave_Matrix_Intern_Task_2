@@ -43,6 +43,7 @@ Three different models were compared for their performance on the sentiment anal
 1. Logistic Regression
 2. Support Vector Machine (SVM)
 3. Bernoulli Naive Bayes
+   The idea behind choosing these models is that we want to try all the classifiers on the dataset ranging from simple ones to complex models, and then try to find out the one which gives the best performance among them
 
 Each model was evaluated using:
 
@@ -57,35 +58,61 @@ The ROC-AUC curves for all three models were plotted to visualize their performa
 Results
 After comparing the models, Logistic Regression was found to be the best fit for the dataset, achieving the highest F1 score, accuracy, and AUC.
 
-* Logistic Regression F1 Score: X.XX
-* Logistic Regression Accuracy: X.XX
-* Logistic Regression Confusion Matrix:
+* Logistic Regression F1 Score(0): 0.79
+* Logistic Regression F1 Score(1): 0.78
+* Logistic Regression Accuracy: 0.78
+* ROC Curve (area= 0.78)
+ Logistic Regression Confusion Matrix:
 
-lua
-Copy code
-   *       [[True Negatives, False Positives],
-           [False Negatives, True Positives]]
+
+   *       [[40.21%, 9.66%],
+           [12.14% , 37.99%]]
 
        
-SVM F1 Score: X.XX
-
-SVM Accuracy: X.XX
+* SVM F1 Score(1): 0.79
+* SVM F1 Score (0) : 0.80
+* SVM Accuracy: 0.80
+* ROC Curve (area= 0.80)
 
 SVM Confusion Matrix:
 
-lua
-Copy code
-*      [[True Negatives, False Positives],
-       [False Negatives, True Positives]]
+
+*      [[39.49%, 10.38%],
+       [10.07%, 40.06%]]
 
    
-* Bernoulli Naive Bayes F1 Score: X.XX
-* Bernoulli Naive Bayes Accuracy: X.XX
+* Bernoulli Naive Bayes F1 Score (1) : 80.0
+* Bernoulli Naive Bayes F1 Score: 80.0
+* Bernoulli Naive Bayes Accuracy: 80.0
+* ROC Curve (area= 0.80)
 * Bernoulli Naive Bayes Confusion Matrix:
 
-    lua
-Copy code
-*      [[True Negatives, False Positives],
-      [False Negatives, True Positives]]
 
+*      [[39.62%, 10.25%],
+      [9.50%, 40.63% ]]
+
+### Conclusion
+The Logistic Regression model outperformed the other models in terms of accuracy, F1 score, and AUC, making it the ideal choice for sentiment analysis in this case
+
+
+### Usage
+The trained Logistic Regression model has been saved for further predictions. You can load the model and make predictions on new tweet data using the following code snippet:
+
+*      import pickle
+
+      # Load the saved model
+      with open('trained_model.sav', 'rb') as file:
+      loaded_model = pickle.load(file)
+
+      # Predict on new data
+      prediction = loaded_model.predict(X_new)
+
+
+###  License
+This project is licensed under the MIT License.
+
+### Acknowledgements
+* scikit-learn for machine learning tools.
+* Pandas for data manipulation.
+* Matplotlib and Seaborn for data visualization.
 
