@@ -62,7 +62,7 @@ After comparing the models, Logistic Regression was found to be the best fit for
 * Logistic Regression F1 Score(1): 0.78
 * Logistic Regression Accuracy: 0.78
 * ROC Curve (area= 0.78)
- Logistic Regression Confusion Matrix:
+ * Logistic Regression Confusion Matrix:
 
 
    *       [[40.21%, 9.66%],
